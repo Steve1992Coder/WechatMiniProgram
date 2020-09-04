@@ -1,26 +1,24 @@
 /* miniprogram/pages/photoShow/photoShow.wxss */
 
-.item-container{
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  width: 92%;
-  margin: 4%;
-  display: flex;
-  flex-direction: row;
-  background: white;
-  padding-top: 5pt;
-  padding-bottom: 5pt;
-  border-radius: 5px;
+.imgCheckbox{
+  margin-bottom: 20rpx;
 }
 .img{
-  width:50%;
-  height: 200rpx;
+  width:500rpx;
+  height: 500rpx;
   margin-top: 10rpx;
   margin-left: 20rpx;
 }
 
 .opt-button{
-  margin-left: 5rpx;
   display: flex;
-  flex-direction: column;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(151, 151, 145);
+}
+
+.opt-button button{
+  margin-left: 5rpx;
+  background-color: aqua;
 }

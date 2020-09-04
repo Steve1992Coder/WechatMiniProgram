@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    dataList: []
+    dataList: [],
+    selectPhotoId: ''
   },
 
   /**
@@ -67,16 +68,21 @@ Page({
     let that = this;
     wx.cloud.database().collection('imagelist').get({
       success(res){
-        console.log(res)
         that.setData({
           dataList:res.data
         })
       }
     })
   },
+
+  checkboxChange(e) {
+    this.data.selectPhotoId=e.detail.value
+  },
+
   delPhoto(event){
     let that = this;
-    let id = event.currentTarget.dataset.id;
+    let id = this.data.selectPhotoId;
+    console.log(id);
     wx.showModal({
       title: '删除！',
       content: '确定删除嘛？',
